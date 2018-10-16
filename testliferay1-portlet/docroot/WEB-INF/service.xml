@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 6.1.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_6_1_0.dtd">
+<service-builder package-path="com.test.database">
+	<author>QUY CNTT</author>
+	<namespace>database</namespace>
+    <entity name="Employee" local-service="true" remote-service="false" table="employee">
+        <column name="id" type="int" primary="true" id-type="increment" db-name="id"></column>
+        <column name="name" type="String" db-name="name"></column>
+        <column name="address" type="String" db-name="address"></column>
+        <column name="phone" type="String" db-name="phone"></column>
+        <column name="iddepartment" type="int" db-name="iddepartment"></column>
+	    <finder return-type="Collection" name="Department">
+			<finder-column name="iddepartment"></finder-column>
+	    </finder>
+	    <finder return-type="Employee" name="Employee">
+	    <finder-column name="id"></finder-column>
+	    </finder>
+    </entity>
+    <entity name="Department" local-service="true" remote-service="false" table="department">
+        <column name="iddepartment" type="int" primary="true" db-name="iddepartment" id-type="increment"></column>
+        <column name="name" type="String" db-name="name"></column>
+    </entity>
+</service-builder>

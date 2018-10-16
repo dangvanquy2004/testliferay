@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.test.database.model.Department">
+		<field name="iddepartment" type="int" />
+		<field name="name" type="String" />
+	</model>
+	<model name="com.test.database.model.Employee">
+		<field name="id" type="int" />
+		<field name="name" type="String" />
+		<field name="address" type="String" />
+		<field name="phone" type="String" />
+		<field name="iddepartment" type="int" />
+	</model>
+</model-hints>

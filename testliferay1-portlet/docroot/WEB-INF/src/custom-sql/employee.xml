@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<custom-sql>
+    <sql id="com.test.database.service.persistence.EmployeeFinder.findEmployee">
+        <![CDATA[
+            SELECT
+                *
+            FROM
+                employee
+            WHERE
+                (employee.name like ?)
+        ]]>
+    </sql>
+    <sql id="com.test.database.service.persistence.EmployeeFinder.findPhoneEmployee">
+        <![CDATA[
+            SELECT
+                *
+            FROM
+                employee
+            WHERE
+                (employee.phone like ?)
+        ]]>
+    </sql>
+</custom-sql>
